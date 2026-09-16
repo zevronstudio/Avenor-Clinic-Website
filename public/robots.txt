@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://avenorclinic.com/sitemap.xml

@@ -1,0 +1,59 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) * .6);
+  --radius-md: calc(var(--radius) * .8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+}
+
+:root {
+  color-scheme: light;
+  --background: #fbfaf7;
+  --foreground: #123b3d;
+  --card: #ffffff;
+  --card-foreground: #123b3d;
+  --popover: #ffffff;
+  --popover-foreground: #123b3d;
+  --primary: #0e4d4f;
+  --primary-foreground: #ffffff;
+  --secondary: #e5f0ed;
+  --secondary-foreground: #123b3d;
+  --muted: #f4e9e2;
+  --muted-foreground: #607876;
+  --accent: #f2c8ae;
+  --accent-foreground: #123b3d;
+  --border: #dce7e3;
+  --input: #dce7e3;
+  --ring: #bb7052;
+  --radius: .75rem;
+}
+
+* { @apply border-border outline-ring/50; }
+html { scroll-behavior: smooth; }
+body { @apply bg-background text-foreground; margin: 0; }
+button, a, input, select { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 3px solid #bb7052; outline-offset: 3px; }
+.field { @apply mt-1 w-full rounded-xl border border-[#dce7e3] bg-[#fbfaf7] px-4 py-3 font-normal text-[#123b3d] outline-none transition placeholder:text-[#9aacab] focus:border-[#0e4d4f] focus:ring-2 focus:ring-[#0e4d4f]/10; }
+.font-serif { font-family: Georgia, 'Times New Roman', serif; }
